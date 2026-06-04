@@ -1,17 +1,19 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>متجر روح | في كل بيت روح</title>
     
-    <!-- استيراد خطوط عربية فاخرة من جوجل -->
+    <!-- استيراد خطوط عربية فاخرة -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- استيراد مكتبة الأيقونات (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* إعدادات الخلفية الفاخرة */
         body {
             background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
             background-color: #000000;
@@ -28,7 +30,6 @@
             overflow: hidden;
         }
 
-        /* الحاوية الرئيسية لتأثير التحميل الناعم */
         .container {
             text-align: center;
             animation: fadeIn 1.5s ease-out forwards;
@@ -36,7 +37,6 @@
             width: 100%;
         }
 
-        /* تنسيق الشعار الاحترافي */
         .logo-wrapper {
             position: relative;
             margin-bottom: 25px;
@@ -47,15 +47,8 @@
             width: 100%;
             height: auto;
             filter: drop-shadow(0px 4px 20px rgba(212, 175, 55, 0.15));
-            transition: transform 0.4s ease;
         }
 
-        /* تأثير تفاعلي خفيف عند لمس الشعار */
-        .logo-wrapper img:hover {
-            transform: scale(1.03);
-        }
-
-        /* تنسيق النص "في كل بيت روح" */
         .slogan {
             font-size: 26px;
             font-weight: 400;
@@ -67,50 +60,86 @@
             text-shadow: 0px 2px 10px rgba(212, 175, 55, 0.1);
         }
 
-        /* خط ديكوري صغير تحت النص */
         .divider {
             width: 60px;
             height: 2px;
             background: linear-gradient(90deg, transparent, #d4af37, transparent);
-            margin: 15px auto 0 auto;
+            margin: 15px auto 25px auto;
             opacity: 0.7;
         }
 
-        /* تأثيرات الحركة (Animation) */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(15px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* تصميم الأيقونات */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* للسماح للأيقونات بالنزول لسطر جديد إذا كانت الشاشة صغيرة */
+            gap: 20px;
+            margin-top: 10px;
         }
 
-        /* تحسينات الشاشات الصغيرة جداً */
-        @media (max-width: 360px) {
-            .logo-wrapper img {
-                max-width: 220px;
-            }
-            .slogan {
-                font-size: 20px;
-            }
+        .social-links a {
+            color: #d4af37; /* اللون الذهبي */
+            font-size: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px);
+            color: #1a1a1a;
+            background: #d4af37;
+            box-shadow: 0px 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- تم تعديل اسم الصورة بدقة إلى الاسم الجديد logoo.png -->
+        <!-- الشعار -->
         <div class="logo-wrapper">
             <img src="logoo.png" alt="شعار متجر روح">
         </div>
         
-        <!-- النص التسويقي بالخط الذهبي الفاخر -->
+        <!-- الشعار اللفظي -->
         <h1 class="slogan">في كل بيت روح</h1>
         <div class="divider"></div>
+
+        <!-- روابط التواصل الاجتماعي -->
+        <div class="social-links">
+
+          <!-- فيس بوك -->
+   <a href="https://www.facebook.com/share/1U4ayT64on/?mibextid=wwXIfr" target="_blank" title="فيس بوك"><i class="fab fa-facebook-f"></i></a>
+
+            <!-- واتساب (تم تصحيح الرابط ليعمل بشكل مباشر) -->
+            <a href="https://wa.me/201031363663" target="_blank" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+            
+            <!-- انستجرام -->
+            <a href="https://www.instagram.com/rouh_yh?igsh=MjNxdGZpdWIybm1i&utm_source=qr" target="_blank" title="انستجرام"><i class="fab fa-instagram"></i></a>
+            
+            <!-- تيك توك -->
+            <a href="https://www.tiktok.com/@user7404484236759?_r=1&_t=ZS-96vDc6hadNN" target="_blank" title="تيك توك"><i class="fab fa-tiktok"></i></a>
+            
+            <!-- سناب شات -->
+            <a href="https://snapchat.com/t/rFa45UTD" target="_blank" title="سناب شات"><i class="fab fa-snapchat-ghost"></i></a>
+
+  
+         
+        </div>
     </div>
 
 </body>
 </html>
+
